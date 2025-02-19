@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Exhibits</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Fixed Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fcfafa;
+            padding: 20px;
+            z-index: 900;
+        }
+
+        .navbar .logo {
+            color: #0f0f0f;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .logo-container img {
+            height: 60px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            color: #000000;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        /* Push the content below the fixed navbar */
+        .container {
+            margin-top: 110px; /* Adjust this based on the navbar height */
+        }
+
+        /* Custom styles to modify card size */
+        .card {
+            height: 100%;
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+     <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="https://nationalmuseumindia.gov.in/assets/images/logo.jpg" alt="Museum Logo" class="logo-image">
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">About</a></li>
+            <li><a href="exhibits.html">Exhibitions</a></li>
+            <li><a href="chatbot.html">Chatbot</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="container">
+        <h1 class="text-center">Museum Exhibitions</h1>
+        <div class="row">
+            <!-- Space Museum Card -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="space.jpg" class="card-img-top" alt="Space Museum">
+                    <div class="card-body">
+                        <h5 class="card-title">Space Museum</h5>
+                        <p class="card-text">Explore the wonders of the universe and space exploration.</p>
+                        <a href="space museum.html" class="btn btn-primary">Visit Space Museum</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Body Parts Museum Card -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="body parts.png" class="card-img-top" alt="Body Parts Museum">
+                    <div class="card-body">
+                        <h5 class="card-title">Body Parts Museum</h5>
+                        <p class="card-text">Learn about human anatomy and the fascinating functions of the body.</p>
+                        <a href="visit bodyparts.html" class="btn btn-primary">Visit Body Parts Museum</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Science Museum Card -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="science.jpg" class="card-img-top" alt="Science Museum">
+                    <div class="card-body">
+                        <h5 class="card-title">Science Museum</h5>
+                        <p class="card-text">Dive into the world of scientific discoveries and inventions.</p>
+                        <a href="#" class="btn btn-primary">Visit Science Museum</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="ancient.jpg" class="card-img-top" alt="Ancient People Museum">
+                    <div class="card-body">
+                        <h5 class="card-title">Ancient People Museum</h5>
+                        <p class="card-text">Discover the fascinating history of ancient civilizations and their people.</p>
+                        <a href="#" class="btn btn-primary">Visit Ancient People Museum</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="botoneyyy.jpg" class="card-img-top" alt="Botany Museum">
+                    <div class="card-body">
+                        <h5 class="card-title">Botany Museum</h5>
+                        <p class="card-text">Explore the world of plants, trees, and the science of botany.</p>
+                        <a href="#" class="btn btn-primary">Visit Botany Museum</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="zoologyy.jpg" class="card-img-top" alt="Zoology Museum">
+                    <div class="card-body">
+                        <h5 class="card-title">Zoology Museum</h5>
+                        <p class="card-text">Explore the animal kingdom and learn about various species and habitats.</p>
+                        <a href="#" class="btn btn-primary">Visit Zoology Museum</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS & dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

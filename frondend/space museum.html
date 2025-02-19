@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Museum Gallery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+         /* Navbar Styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color:white;
+      padding: 10px 20px;
+    }
+    
+    .navbar .logo {
+      color: hsl(0, 0%, 0%);
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .logo-container img {
+            height: 60px;
+        }
+    
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+    
+    .nav-links a {
+      color: hsl(0, 0%, 0%);
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: background-color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      background-color: #575757;
+      border-radius: 5px;
+    }
+
+        .card img {
+            height: 250px; /* Set a fixed height for the images */
+            object-fit: cover; /* Ensures images cover the area without distorting */
+            width: 100%; /* Ensure the image fills the width */
+            text-align: center;
+        }
+        
+        }
+    
+    </style>
+</head>
+<body>
+     <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo-container">
+      <!-- Image logo -->
+      <img src="https://nationalmuseumindia.gov.in/assets/images/logo.jpg" alt="Museum Logo" class="logo-image">
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">About</a></li>
+      <li><a href="exhibits.html">Exhibitions</a></li>
+      <li><a href="chatbot.html">Chatbot</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+    <div class="container mt-5">
+        <h1 class="text-center">Space Museum Gallery</h1>
+        <div class="row">
+            <!-- Space Image 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="spacevisitsss.jpg" class="card-img-top" alt="Space Image 1">
+                    <h4>Ready for Launch</h4>
+                </div>
+            </div>
+            <!-- Space Image 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="spacevisits.jpg" class="card-img-top" alt="Space Image 2">
+                    <h4>Future Works</h4>
+                </div>
+            </div>
+            <!-- Space Image 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="spacevisit.jpg" class="card-img-top" alt="Space Image 3">
+                    <h4>Space Suit</h4>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="spaceee.webp" class="card-img-top" alt="Space Image 2">
+                    <h4>Aerospace Structure</h4>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="spacevvvv.jpg" class="card-img-top" alt="Space Image 2">
+                    <h4>Launch Vehicles</h4>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="spacevisitsss.jpg" class="card-img-top" alt="Space Image 2">
+                    <h4>Ready for Launch</h4>
+                </div>
+            </div>
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS & dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

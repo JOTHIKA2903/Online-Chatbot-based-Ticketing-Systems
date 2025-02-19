@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-body">
+            <h3 class="text-center mb-4">Sign In</h3>
+            <form id="signInForm" action="login.html">
+              <div class="mb-3">
+                <label for="signInName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="signInName" required>
+              </div>
+              <div class="mb-3">
+                <label for="signInEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="signInEmail" required>
+              </div>
+              <div class="mb-3">
+                <label for="signInPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="signInPassword" required>
+              </div>
+              <button type="button" class="btn btn-primary w-100" onclick="signIn()">Sign In</button>
+              <p id="signInError" class="text-danger mt-3"></p>
+            </form>
+            <div class="text-center mt-3">
+              <p>Already have an account? <a href="login.html">Login here</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  function signIn() {
+    const name = document.getElementById('signInName').value.trim();
+    const email = document.getElementById('signInEmail').value.trim();
+    const password = document.getElementById('signInPassword').value.trim();
+  
+    const errorElement = document.getElementById('signInError');
+    errorElement.textContent = '';
+  
+    // Validate fields
+    if (!name || !email || !password) {
+      errorElement.textContent = 'All fields are required.';
+      return;
+    }
+  
+    // Retrieve existing users or initialize an empty array
+    let users = JSON.parse(localStorage.getItem('users'));
+    if (!Array.isArray(users)) {
+      users = []; // Ensure it's an array
+    }
+  
+    // Check if email is already registered
+    if (users.some(user => user.email === email)) {
+      errorElement.textContent = 'Email is already registered.';
+      return;
+    }
+  
+    // Save user data
+    users.push({ name, email, password });
+    localStorage.setItem('users', JSON.stringify(users));
+  
+    alert('Sign In successful! Redirecting to login page...');
+    window.location.href = 'login.html';
+  }
+  
+</script>
+</body>
+</html>
