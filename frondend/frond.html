@@ -154,13 +154,21 @@
       font-size: 16px; /* Font size */
       cursor: pointer; /* Pointer cursor on hover */
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-      transition: background-color 0.3s ease;align-items:center"onclick="window.location.href='book.php'">BuyTicket</button>
+      transition: background-color 0.3s ease;align-items:center"onclick="window.location.href='qr.html'">BuyTicket</button>
     </div>
     <ul class="nav-links">
+
       <li><a href="home.html">About</a></li>
       <li><a href="exhibits.html">Exhibitions</a></li>
       <li><a href="chatbot.html">Chatbot</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <!-- Image logo with onclick -->
+<img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" 
+alt="Museum Logo" 
+class="logo-image" 
+onclick="handleLogoClick()" 
+style="cursor:pointer; width: 50px; height: 50px  ;">
+
     </ul>
   </nav>
 
@@ -290,5 +298,18 @@
       alert(fullContent);
     }
   </script>
+  <script>
+    function handleLogoClick() {
+      // Simulate user check (in real case, you'd check cookies/session or DB)
+     // const hasAccount = confirm("");
+      
+      if (hasAccount) {
+        window.location.href = "login.html"; // redirect to login
+      } else {
+        window.location.href = "sigin.html"; // redirect to signup
+      }
+    }
+  </script>
+  
 </body>
 </html>
