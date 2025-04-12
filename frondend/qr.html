@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Museum Ticket Payment</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('enter.jpg.webp'); /* Replace with your background image URL */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    input, button {
+      padding: 10px;
+      width: 100%;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #qrcode {
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Buy Museum Ticket</h2>
+
+  <form id="paymentForm" method="POST" action="store.php">
+    <div class="form-group">
+      <label>Your Name</label>
+      <input type="text" name="name" required />
+    </div>
+    <div class="form-group">
+      <label>Enter Amount (INR):</label>
+      <input type="number" name="amount" id="amount" required min="1">
+    </div>
+
+    <button type="button" onclick="generateQR()">Generate QR & Pay</button>
+
+    <div id="qrcode"></div>
+
+    <br>
+    <button type="submit">Submit Payment Details</button>
+  </form>
+</div>
+
+<script>
+function generateQR() {
+  const amount = document.getElementById("amount").value;
+  if (!amount || amount <= 0) {
+    alert("Please enter a valid amount.");
+    return;
+  }
+
+  const upiID = "solaikumar133@okaxis";
+  const name = "Museum Ticket";
+  const upiLink = `upi://pay?pa=${upiID}&pn=${name}&am=${amount}&cu=INR`;
+
+  // Clear existing QR
+  document.getElementById("qrcode").innerHTML = "";
+
+  // Generate QR
+  new QRCode(document.getElementById("qrcode"), {
+    text: upiLink,
+    width: 200,
+    height: 200,
+  });
+
+  alert("Scan the QR code using GPay, PhonePe, Paytm, etc. to complete the payment.");
+}
+</script>
+
+</body>
+</html>
